@@ -22,6 +22,7 @@ export const config = {
     "@typescript-eslint",
     "json",
     "etc",
+    "unicorn",
   ],
 } satisfies ESLint.ConfigData;
 
@@ -107,10 +108,10 @@ const TYPED_RULES = Rules.build((rules) =>
       allowEmpty: true,
     })
     .typed("no-import-type-side-effects")
-    // .typed("consistent-type-imports", {
-    //   disallowTypeAnnotations: false,
-    //   fixStyle: "separate-type-imports",
-    // })
+    .typed("consistent-type-imports", {
+      disallowTypeAnnotations: false,
+      fixStyle: "separate-type-imports",
+    })
     .typed("parameter-properties", {
       allow: ["readonly"],
     })
@@ -168,4 +169,5 @@ export const rules = {
   "import/newline-after-import": "error",
   "import/no-duplicates": "error",
   "etc/no-commented-out-code": "warn",
+  "unicorn/prefer-node-protocol": "error",
 } satisfies Linter.RulesRecord;
