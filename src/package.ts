@@ -8,8 +8,22 @@ const BASE_OVERRIDES = [
     extends: ["plugin:@starbeam-dev/json:recommended"],
   },
   {
-    files: ["*.js", "*.mjs"],
+    files: ["*.js", "*.cjs", "*.mjs"],
     extends: ["plugin:@starbeam-dev/typed-js"],
+    parserOptions: {
+      project: ["tsconfig.json"],
+    },
+    rules: {
+      "@typescript-eslint/triple-slash-reference": "off",
+    },
+  },
+  {
+    files: ["*.cjs"],
+    extends: ["plugin:@starbeam-dev/typed-js"],
+    rules: {
+      "@typescript-eslint/no-var-requires": "off",
+      "@typescript-eslint/triple-slash-reference": "off",
+    },
     parserOptions: {
       project: ["tsconfig.json"],
     },

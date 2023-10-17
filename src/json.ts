@@ -53,9 +53,10 @@ export const packageJSON = json({
       order: [
         "private",
         "name",
+        "type",
         "version",
         "description",
-        "type",
+        "license",
         "main",
         "module",
         "types",

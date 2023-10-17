@@ -161,9 +161,15 @@ export const rules = {
   "file-extension-in-import-ts/file-extension-in-import-ts": [
     "error",
     "always",
-    { extMapping: { ".ts": ".js", forceIndexFileImport: true } },
+    {
+      extMapping: {
+        ".ts": ".js",
+        forceIndexFileImport: true,
+      },
+    },
   ],
-  "import/no-unresolved": "error",
+  // this should be handled by typescript
+  "import/no-unresolved": "off",
   "import/no-relative-packages": "error",
   "import/first": "error",
   "import/newline-after-import": "error",
