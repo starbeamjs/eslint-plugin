@@ -14,6 +14,8 @@ export const recommended = {
         ".eslintrc.json",
         "package.json",
         ".vscode/settings.json",
+        "tsdoc.json",
+        "api-extractor.json",
       ],
     },
     {
@@ -31,6 +33,10 @@ export const recommended = {
     {
       extends: ["plugin:@starbeam-dev/json:package"],
       files: ["package.json"],
+    },
+    {
+      extends: ["plugin:@starbeam-dev/jsonc:default"],
+      files: ["*.jsonc", "tsdoc.json", "typedoc.json", "api-extractor.json"],
     },
   ],
 } satisfies ESLint.ConfigData;

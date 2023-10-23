@@ -4,11 +4,25 @@ const BASE_IGNORE = ["node_modules", "dist", "tests", "html"];
 
 const BASE_OVERRIDES = [
   {
-    files: ["*.json"],
+    files: ["*.json", "*.jsonc"],
     extends: ["plugin:@starbeam-dev/json:recommended"],
   },
   {
-    files: ["*.js", "*.cjs", "*.mjs"],
+    files: [
+      "*.jsonc",
+      "*.js",
+      "*.cjs",
+      "*.jsx",
+      "*.mjs",
+      "*.ts",
+      "*.mts",
+      "*.tsx",
+      "*.d.ts",
+    ],
+    extends: ["plugin:comment-length/recommended"],
+  },
+  {
+    files: ["*.js", "*.cjs", "*.jsx", "*.mjs"],
     extends: ["plugin:@starbeam-dev/typed-js"],
     parserOptions: {
       project: ["tsconfig.json"],
@@ -35,7 +49,7 @@ export const library = {
   overrides: [
     ...BASE_OVERRIDES,
     {
-      files: ["*.ts", "*.mts", "*.d.ts"],
+      files: ["*.ts", "*.mts", "*.tsx", "*.d.ts"],
       extends: ["plugin:@starbeam-dev/tight"],
       parserOptions: {
         project: ["tsconfig.json"],

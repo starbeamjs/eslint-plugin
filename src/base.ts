@@ -173,6 +173,7 @@ export const rules = {
   "import/no-relative-packages": "error",
   "import/first": "error",
   "import/newline-after-import": "error",
+  "import/consistent-type-specifier-style": ["error", "prefer-top-level"],
   "import/no-duplicates": "error",
   "etc/no-commented-out-code": "warn",
   "unicorn/prefer-node-protocol": "error",

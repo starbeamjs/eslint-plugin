@@ -19,7 +19,9 @@ const compat = new FlatCompat({
 
 const importSettings = settings(imports.configs.typescript.settings, {
   "import/resolver": {
-    typescript: true,
+    typescript: {
+      alwaysTryTypes: true,
+    },
   },
 });
 
