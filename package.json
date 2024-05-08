@@ -1,6 +1,6 @@
 {
   "name": "@starbeam-dev/eslint-plugin",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "type": "module",
   "main": "dist/index.cjs",
   "types": "src/index.ts",
@@ -11,6 +11,7 @@
   },
   "scripts": {
     "prepare": "rollup -c",
+    "prepack": "rollup -c",
     "test:lint": "eslint . --max-warnings 0",
     "test:types": "tsc -b"
   },
