@@ -26,6 +26,7 @@ const BASE_OVERRIDES = [
     extends: ["plugin:@starbeam-dev/typed-js"],
     parserOptions: {
       project: ["tsconfig.json"],
+      EXPERIMENTAL_useSourceOfProjectReferenceRedirect: true,
     },
     rules: {
       "@typescript-eslint/triple-slash-reference": "off",
@@ -40,6 +41,7 @@ const BASE_OVERRIDES = [
     },
     parserOptions: {
       project: ["tsconfig.json"],
+      EXPERIMENTAL_useSourceOfProjectReferenceRedirect: true,
     },
   },
 ] satisfies Linter.ConfigOverride<Linter.RulesRecord>[];
@@ -53,6 +55,7 @@ export const library = {
       extends: ["plugin:@starbeam-dev/tight"],
       parserOptions: {
         project: ["tsconfig.json"],
+        EXPERIMENTAL_useSourceOfProjectReferenceRedirect: true,
       },
     },
   ],
@@ -67,6 +70,7 @@ export const tests = {
       extends: ["plugin:@starbeam-dev/loose"],
       parserOptions: {
         project: "tsconfig.json",
+        EXPERIMENTAL_useSourceOfProjectReferenceRedirect: true,
       },
     },
   ],
