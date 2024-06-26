@@ -115,19 +115,7 @@ const TYPED_RULES = Rules.build((rules) =>
     .typed("parameter-properties", {
       allow: ["readonly"],
     })
-    .typed("no-type-alias", [
-      "error",
-      {
-        allowAliases: "always",
-        allowCallbacks: "always",
-        allowConditionalTypes: "always",
-        allowConstructors: "always",
-        allowLiterals: "in-unions-and-intersections",
-        allowMappedTypes: "always",
-        allowTupleTypes: "always",
-        allowGenerics: "always",
-      },
-    ])
+    .typed("consistent-type-definitions", "error")
     .typed("no-unsafe-argument", "warn")
     .typed("no-unsafe-assignment", "warn")
     .typed("no-unsafe-call", "warn")
