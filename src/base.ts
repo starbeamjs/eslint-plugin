@@ -31,7 +31,7 @@ export const extendsFrom = [
   "plugin:@typescript-eslint/recommended",
   "plugin:@typescript-eslint/recommended-requiring-type-checking",
   "plugin:import/errors",
-  "plugin:json/recommended",
+  "plugin:json/recommended-legacy",
   "plugin:eslint-comments/recommended",
   "prettier",
 ] satisfies ESLint.ConfigData["extends"];
